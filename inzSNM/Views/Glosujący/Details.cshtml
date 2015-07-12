@@ -1,0 +1,51 @@
+﻿@model inzSNM.Models.Glosujący
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Glosujący</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Narodowosc.Narodowosc1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Narodowosc.Narodowosc1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plec.Plec1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plec.Plec1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wiek.Wiek1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wiek.Wiek1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Osoba }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

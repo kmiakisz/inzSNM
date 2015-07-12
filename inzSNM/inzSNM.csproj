@@ -40,12 +40,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Mvc.Mailer">
-      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
-    </Reference>
-    <Reference Include="SecurityGuard">
-      <HintPath>..\packages\SecurityGuard.MVC5.1.0.5\lib\net40\SecurityGuard.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -166,32 +160,12 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Areas\SecurityGuard\Controllers\DashboardController.cs" />
-    <Compile Include="Areas\SecurityGuard\Controllers\MembershipController.cs" />
-    <Compile Include="Areas\SecurityGuard\Controllers\RoleController.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\ChangePasswordViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\DashboardViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\ForgotPasswordViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\GrantRolesToUserViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\JsonResponse.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\ManageRolesViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\ManageUsersViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\RegisterViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\ResponseItem.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\RoleViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\SelectObject.cs" />
-    <Compile Include="Areas\SecurityGuard\Models\UserViewModel.cs" />
-    <Compile Include="Areas\SecurityGuard\SecurityGuardAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\GlosującyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SGAccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Mailers\IPasswordResetMailer.cs" />
-    <Compile Include="Mailers\Models\MailerModel.cs" />
-    <Compile Include="Mailers\PasswordResetMailer.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
@@ -233,7 +207,6 @@
     <Compile Include="Models\Kategoria.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\LogOnViewModel.cs" />
     <Compile Include="Models\Muzyka.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -258,31 +231,6 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\SecurityGuard\images\blue_ico.png" />
-    <Content Include="Content\SecurityGuard\images\blue_message.gif" />
-    <Content Include="Content\SecurityGuard\images\go.gif" />
-    <Content Include="Content\SecurityGuard\images\green_ico.png" />
-    <Content Include="Content\SecurityGuard\images\green_message.gif" />
-    <Content Include="Content\SecurityGuard\images\negative.gif" />
-    <Content Include="Content\SecurityGuard\images\next.gif" />
-    <Content Include="Content\SecurityGuard\images\pag_bg.gif" />
-    <Content Include="Content\SecurityGuard\images\positive.gif" />
-    <Content Include="Content\SecurityGuard\images\prev.gif" />
-    <Content Include="Content\SecurityGuard\images\red_ico.png" />
-    <Content Include="Content\SecurityGuard\images\red_message.gif" />
-    <Content Include="Content\SecurityGuard\images\td_bg1.gif" />
-    <Content Include="Content\SecurityGuard\images\td_bg2.gif" />
-    <Content Include="Content\SecurityGuard\images\white_ico.png" />
-    <Content Include="Content\SecurityGuard\images\white_message.gif" />
-    <Content Include="Content\SecurityGuard\images\yellow_ico.png" />
-    <Content Include="Content\SecurityGuard\images\yellow_message.gif" />
-    <Content Include="Content\SecurityGuard\pagination.css" />
-    <Content Include="Content\SecurityGuard\scripts\jquery-1.6.1.min.js" />
-    <Content Include="Content\SecurityGuard\scripts\jquery.jqia.selects.js" />
-    <Content Include="Content\SecurityGuard\scripts\jquery.validate.min.js" />
-    <Content Include="Content\SecurityGuard\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Content\SecurityGuard\scripts\modernizr-1.7.min.js" />
-    <Content Include="Content\SecurityGuard\securityguard.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -306,14 +254,6 @@
       <DependentUpon>DBModel.edmx</DependentUpon>
       <LastGenOutput>DBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Areas\SecurityGuard\Views\Web.config" />
-    <Content Include="Areas\SecurityGuard\Views\Shared\_SecurityGuardLayoutPage.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Role\Index.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Membership\Update.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Membership\Index.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Membership\GrantRolesToUser.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Membership\CreateUser.cshtml" />
-    <Content Include="Areas\SecurityGuard\Views\Dashboard\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -326,13 +266,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\SGAccount\ChangePassword.aspx" />
-    <Content Include="Views\SGAccount\ChangePasswordSuccess.aspx" />
-    <Content Include="Views\SGAccount\EnterSecretAnswer.aspx" />
-    <Content Include="Views\SGAccount\ForgotPassword.aspx" />
-    <Content Include="Views\SGAccount\ForgotPasswordSuccess.aspx" />
-    <Content Include="Views\SGAccount\Login.aspx" />
-    <Content Include="Views\SGAccount\Register.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -363,15 +296,11 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\SGAccount\Register.cshtml" />
-    <Content Include="Views\SGAccount\Login.cshtml" />
-    <Content Include="Views\SGAccount\ForgotPasswordSuccess.cshtml" />
-    <Content Include="Views\SGAccount\ForgotPassword.cshtml" />
-    <Content Include="Views\SGAccount\EnterSecretAnswer.cshtml" />
-    <Content Include="Views\SGAccount\ChangePasswordSuccess.cshtml" />
-    <Content Include="Views\SGAccount\ChangePassword.cshtml" />
-    <Content Include="Views\PasswordResetMailer\PasswordReset.cshtml" />
-    <Content Include="Views\PasswordResetMailer\_Layout.cshtml" />
+    <Content Include="Views\Glosujący\Create.cshtml" />
+    <Content Include="Views\Glosujący\Delete.cshtml" />
+    <Content Include="Views\Glosujący\Details.cshtml" />
+    <Content Include="Views\Glosujący\Edit.cshtml" />
+    <Content Include="Views\Glosujący\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
