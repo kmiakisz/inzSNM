@@ -56,7 +56,7 @@ namespace inzSNM.Controllers
             {
                 db.Glosujący.Add(glosujący);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index"); //zrobić przekieowanie na ankietę !!!
             }
 
             ViewBag.Id_Narod = new SelectList(db.Narodowosc, "Id_Narod", "Narodowosc1", glosujący.Id_Narod);
