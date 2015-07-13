@@ -165,6 +165,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\GlosującyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SkladAnkietyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -303,6 +304,7 @@
     <Content Include="Views\Glosujący\Details.cshtml" />
     <Content Include="Views\Glosujący\Edit.cshtml" />
     <Content Include="Views\Glosujący\Index.cshtml" />
+    <Content Include="Views\SkladAnkiety\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
