@@ -11,6 +11,7 @@ namespace inzSNM.Controllers
         // GET: SkladAnkiety
         public ActionResult Index()
         {
+
             var list = new SelectList(new[]
                                           {
                                               new{ID="1",Name="1"},
