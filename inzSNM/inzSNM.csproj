@@ -163,6 +163,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminPanelController.cs" />
     <Compile Include="Controllers\GlosującyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SkladAnkietyController.cs" />
@@ -257,6 +258,9 @@
       <DependentUpon>DBModel.edmx</DependentUpon>
       <LastGenOutput>DBModel.cs</LastGenOutput>
     </Content>
+    <None Include=".bin\bower.cmd" />
+    <None Include=".bin\git.cmd" />
+    <None Include=".bin\node.cmd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -305,6 +309,7 @@
     <Content Include="Views\Glosujący\Edit.cshtml" />
     <Content Include="Views\Glosujący\Index.cshtml" />
     <Content Include="Views\SkladAnkiety\Index.cshtml" />
+    <Content Include="Views\AdminPanel\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
