@@ -5,14 +5,25 @@
 }
 
 <h2>Ankieta</h2>
+<script>
+    function CallChangefunc(val){
+      
+     //   window.location.href = "/SkladAnkietyController/Submit?value=" + val;
+    }
+</script>
+
+
 
 <div class="row">
     <div class="col-xs-6 col-md-2">
         <a href="#" class="thumbnail">
             <img src="..." alt="...">
         </a>
-        @Html.DropDownList("list", ViewData["list"] as SelectList)
+        @Html.DropDownList("list", ViewData["list"] as SelectList, new { onchange = "document.location.href = '/SkladAnkiety/Submit?id=' + this.options[this.selectedIndex].value;'" })
+
     </div>
+    dupa
+
     <div class="col-xs-6 col-md-2">
         <a href="#" class="thumbnail">
             <img src="..." alt="...">

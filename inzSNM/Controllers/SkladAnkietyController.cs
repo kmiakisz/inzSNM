@@ -32,6 +32,10 @@ namespace inzSNM.Controllers
                 return View();
 
         }
+        public void sumbit()
+        {
+            Console.WriteLine("Ok");
+        }
    
     }
 }
